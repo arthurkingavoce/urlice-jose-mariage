@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mariage Urlice & José</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background:#ddd5c0;
+  display:flex; justify-content:center; align-items:center;
+  min-height:100vh; padding:30px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+}
+
+.fp {
+  width:500px; max-width:100%;
+  background-color:#faf6ee;
+  background-image:radial-gradient(rgba(171,142,91,0.11) 0.55px, transparent 0.75px), radial-gradient(rgba(255,255,255,0.8) 0.7px, transparent 0.9px), linear-gradient(135deg, rgba(255,255,255,0.72), rgba(239,227,200,0.28));
+  background-size:8px 8px, 13px 13px, 100% 100%;
+  background-position:0 0, 3px 5px, 0 0;
+  position:relative;
+  overflow:hidden;
+  border:1px solid #c8a96e;
+  box-shadow: inset 0 0 0 6px #faf6ee, inset 0 0 0 7.5px rgba(200,169,110,0.4);
+}
+
+.corner {
+  position:absolute;
+  width:160px; height:160px;
+  z-index:1; pointer-events:none;
+}
+.corner { display:none; }
+.botanical {
+  position:absolute; width:185px; height:185px; z-index:1;
+  pointer-events:none; opacity:0.62;
+}
+.b-tl { top:-8px; left:-10px; }
+.b-tr { top:-8px; right:-10px; transform:scaleX(-1); }
+.b-br { bottom:-8px; right:-10px; transform:scale(-1); opacity:0.48; }
+.c-tl { top:0; left:0; }
+.c-tr { top:0; right:0; transform:scaleX(-1); }
+.c-br { bottom:0; right:0; transform:scale(-1); }
+
+.verse-band {
+  background:rgba(250,246,238,0.82);
+  padding:10px 44px 9px;
+  text-align:center;
+  position:relative; z-index:2;
+  border-bottom:1px solid rgba(200,169,110,0.8);
+}
+.verse-band p {
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic; color:#2d4a2a;
+  font-size:11.5px; letter-spacing:0.7px; line-height:1.65; margin:0;
+}
+.verse-band span {
+  color:#a9863d; font-style:normal; font-weight:600;
+  font-size:11px; letter-spacing:1.8px; display:block; margin-top:3px;
+}
+
+.fp-inner { padding:54px 50px 46px; position:relative; z-index:2; }
+
+.eyebrow {
+  text-align:center; font-size:11px; letter-spacing:1.4px;
+  color:#6b5a3a; text-transform:none; margin:11px 0 0; font-weight:400;
+}
+
+.big-title {
+  text-align:center;
+  font-family:'Playfair Display',serif;
+  font-size:40px; font-weight:700; letter-spacing:9px;
+  color:#2d4a2a; text-transform:uppercase; line-height:1; margin:0;
+}
+
+.orn { display:flex; align-items:center; justify-content:center; gap:6px; margin:10px 0; }
+
+.monogram {
+  display:flex; align-items:center; justify-content:center; gap:7px;
+  margin:0 0 10px; color:#b8922a;
+  font-family:'Playfair Display',serif; font-size:25px; letter-spacing:1px;
+}
+.monogram span { display:inline-flex; width:34px; height:34px; align-items:center; justify-content:center; border:0.8px solid rgba(184,146,42,0.7); border-radius:50%; }
+.monogram i { font-family:'Great Vibes',cursive; font-size:31px; color:#2d4a2a; line-height:1; }
+
+.names {
+  text-align:center; font-family:'Great Vibes',cursive;
+  font-size:69px; color:#1e3318; line-height:1.08; margin:0;
+}
+.names .gold { color:#b8922a; font-size:52px; }
+
+.invite-block {
+  margin:18px 6px 0; padding:16px 22px;
+  border-left:2px solid #c8a96e; border-right:2px solid #c8a96e;
+  background:rgba(200,169,110,0.06);
+}
+.invite-block p {
+  font-size:13px; color:#3a3020; line-height:1.9;
+  text-align:center; margin:0 0 7px; font-weight:300; letter-spacing:0.3px;
+}
+.invite-block p:last-child { margin:0; }
+.invite-block .hl { font-style:italic; color:#2d4a2a; font-weight:400; }
+
+hr.rule { border:none; border-top:0.5px solid rgba(200,169,110,0.5); margin:16px 0; }
+
+.info-item {
+  display:flex; align-items:flex-start; gap:14px;
+  margin:8px 0; padding:13px 14px;
+  border:0.5px solid rgba(200,169,110,0.35); border-radius:3px;
+  background:rgba(255,253,247,0.62);
+}
+
+.ico {
+  width:38px; height:38px; flex-shrink:0;
+  border:1px solid #4a6741; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(74,103,65,0.08);
+}
+.ico svg { width:16px; height:16px; stroke:#4a6741; fill:none; stroke-width:1.6; stroke-linecap:round; }
+
+.itxt { flex:1; padding-top:2px; }
+.ilbl {
+  font-size:9.5px; letter-spacing:2.5px; text-transform:uppercase;
+  color:#c8a96e; font-weight:600; margin-bottom:3px;
+  font-family:'Cormorant Garamond',serif;
+}
+.ival {
+  font-size:14.5px; color:#1e2a1a; font-weight:400;
+  line-height:1.5; letter-spacing:0.3px;
+  font-family:'Cormorant Garamond',serif;
+}
+.ival strong { font-weight:600; }
+.arrival-note { margin-top:4px; color:#6b5a3a; font-size:11.5px; font-style:italic; line-height:1.35; }
+
+.gps-link {
+  display:inline-flex; align-items:center; gap:5px;
+  margin-top:5px; font-size:11px;
+  color:#4a6741; text-decoration:none;
+  font-style:italic; letter-spacing:0.3px;
+  border-bottom:0.5px solid rgba(74,103,65,0.35);
+  padding-bottom:1px;
+  transition:color 0.2s, border-color 0.2s;
+}
+.gps-link:hover { color:#2d4a2a; border-color:#2d4a2a; }
+.gps-link svg { width:12px; height:12px; stroke:currentColor; fill:none; stroke-width:1.8; flex-shrink:0; }
+
+.calendar-wrap { text-align:center; margin:20px 0 2px; }
+.calendar-btn {
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:11px 20px; border:1px solid #2d4a2a; border-radius:2px;
+  background:#2d4a2a; color:#faf6ee; cursor:pointer;
+  font-family:'Cormorant Garamond',serif; font-size:13px;
+  letter-spacing:0.8px; transition:background 0.2s, color 0.2s;
+}
+.calendar-btn:hover { background:#4a6741; border-color:#4a6741; }
+.calendar-btn svg { width:15px; height:15px; stroke:currentColor; fill:none; stroke-width:1.7; }
+
+.blessing {
+  text-align:center; margin-top:2px;
+}
+.blessing p {
+  font-size:11px; letter-spacing:2px; text-transform:uppercase;
+  color:#6b5a3a; line-height:2.1; font-weight:400;
+}
+
+.sign {
+  text-align:center; font-family:'Great Vibes',cursive;
+  font-size:30px; color:#2d4a2a; margin:4px 0 0;
+}
+
+@media (max-width: 768px){
+  body{padding:12px;}
+  .fp{width:100%;max-width:100%;}
+  .fp-inner{padding:38px 22px 32px;}
+  .big-title{font-size:40px;letter-spacing:6px;}
+  .names{font-size:52px;}
+  .names .gold{font-size:40px;}
+  .invite-block{padding:14px 12px;}
+  .invite-block p{font-size:15px;line-height:1.7;}
+  .ival{font-size:15px;}
+  .corner{width:110px;height:110px;}
+}
+@media (max-width: 480px){
+  .big-title{font-size:32px;letter-spacing:4px;}
+  .names{font-size:44px;}
+  .verse-band{padding:10px 16px;}
+  .verse-band p{font-size:11px;}
+  .fp-inner{padding:24px 16px;}
+  .info-item{gap:10px;}
+  .ico{width:32px;height:32px;}
+}
+</style>
+
+</head>
+<body>
+<div class="fp">
+
+  <svg class="corner c-tl" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="30" cy="95" rx="22" ry="12" fill="#4a6741" transform="rotate(-35 30 95)"/>
+    <ellipse cx="55" cy="78" rx="26" ry="13" fill="#2d4a2a" transform="rotate(-12 55 78)"/>
+    <ellipse cx="20" cy="65" rx="18" ry="11" fill="#6b8f5e" transform="rotate(-55 20 65)"/>
+    <ellipse cx="72" cy="55" rx="20" ry="11" fill="#4a6741" transform="rotate(-5 72 55)"/>
+    <ellipse cx="38" cy="118" rx="16" ry="9" fill="#8aad7a" transform="rotate(18 38 118)"/>
+    <ellipse cx="14" cy="40" rx="14" ry="8" fill="#2d4a2a" transform="rotate(-65 14 40)"/>
+    <ellipse cx="90" cy="35" rx="8" ry="5" fill="#d4e8c2" transform="rotate(15 90 35)"/>
+    <ellipse cx="105" cy="45" rx="7" ry="4" fill="#d4e8c2" transform="rotate(-8 105 45)"/>
+    <line x1="62" y1="100" x2="112" y2="28" stroke="#c8a96e" stroke-width="1.2" opacity="0.8"/>
+    <circle cx="112" cy="26" r="3" fill="#c8a96e" opacity="0.9"/>
+    <circle cx="104" cy="17" r="2.2" fill="#c8a96e" opacity="0.75"/>
+    <circle cx="118" cy="16" r="2.2" fill="#c8a96e" opacity="0.7"/>
+    <circle cx="125" cy="24" r="1.8" fill="#c8a96e" opacity="0.6"/>
+    <ellipse cx="8" cy="20" rx="11" ry="6" fill="#6b8f5e" transform="rotate(-75 8 20)"/>
+    <ellipse cx="58" cy="130" rx="10" ry="6" fill="#4a6741" transform="rotate(25 58 130)"/>
+  </svg>
+
+  <svg class="corner c-tr" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="30" cy="95" rx="22" ry="12" fill="#4a6741" transform="rotate(-35 30 95)"/>
+    <ellipse cx="55" cy="78" rx="26" ry="13" fill="#2d4a2a" transform="rotate(-12 55 78)"/>
+    <ellipse cx="20" cy="65" rx="18" ry="11" fill="#6b8f5e" transform="rotate(-55 20 65)"/>
+    <ellipse cx="72" cy="55" rx="20" ry="11" fill="#4a6741" transform="rotate(-5 72 55)"/>
+    <ellipse cx="38" cy="118" rx="16" ry="9" fill="#8aad7a" transform="rotate(18 38 118)"/>
+    <ellipse cx="14" cy="40" rx="14" ry="8" fill="#2d4a2a" transform="rotate(-65 14 40)"/>
+    <ellipse cx="90" cy="35" rx="8" ry="5" fill="#d4e8c2" transform="rotate(15 90 35)"/>
+    <ellipse cx="105" cy="45" rx="7" ry="4" fill="#d4e8c2" transform="rotate(-8 105 45)"/>
+    <line x1="62" y1="100" x2="112" y2="28" stroke="#c8a96e" stroke-width="1.2" opacity="0.8"/>
+    <circle cx="112" cy="26" r="3" fill="#c8a96e" opacity="0.9"/>
+    <circle cx="104" cy="17" r="2.2" fill="#c8a96e" opacity="0.75"/>
+    <circle cx="118" cy="16" r="2.2" fill="#c8a96e" opacity="0.7"/>
+    <circle cx="125" cy="24" r="1.8" fill="#c8a96e" opacity="0.6"/>
+    <ellipse cx="8" cy="20" rx="11" ry="6" fill="#6b8f5e" transform="rotate(-75 8 20)"/>
+    <ellipse cx="58" cy="130" rx="10" ry="6" fill="#4a6741" transform="rotate(25 58 130)"/>
+  </svg>
+
+  <svg class="corner c-br" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="30" cy="95" rx="22" ry="12" fill="#4a6741" transform="rotate(-35 30 95)"/>
+    <ellipse cx="55" cy="78" rx="26" ry="13" fill="#2d4a2a" transform="rotate(-12 55 78)"/>
+    <ellipse cx="20" cy="65" rx="18" ry="11" fill="#6b8f5e" transform="rotate(-55 20 65)"/>
+    <ellipse cx="72" cy="55" rx="20" ry="11" fill="#4a6741" transform="rotate(-5 72 55)"/>
+    <ellipse cx="38" cy="118" rx="16" ry="9" fill="#8aad7a" transform="rotate(18 38 118)"/>
+    <line x1="62" y1="100" x2="112" y2="28" stroke="#c8a96e" stroke-width="1.2" opacity="0.8"/>
+    <circle cx="112" cy="26" r="3" fill="#c8a96e" opacity="0.9"/>
+  </svg>
+
+  <svg class="botanical b-tl" viewBox="0 0 200 200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#41603d" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-5 178 C25 155, 42 132, 65 102 C91 68, 119 46, 161 17"/>
+      <path d="M45 129 C25 120, 17 106, 18 92 C35 96, 47 108, 45 129Z" fill="#6d9363" fill-opacity=".18"/>
+      <path d="M65 102 C50 89, 49 73, 57 59 C71 69, 75 85, 65 102Z" fill="#6d9363" fill-opacity=".16"/>
+      <path d="M82 80 C94 67, 109 64, 123 69 C115 83, 98 88, 82 80Z" fill="#6d9363" fill-opacity=".16"/>
+      <path d="M108 57 C104 42, 112 30, 125 23 C131 38, 124 52, 108 57Z" fill="#6d9363" fill-opacity=".14"/>
+    </g>
+    <g stroke="#b8922a" stroke-width="1" fill="#faf6ee" fill-opacity=".55">
+      <path d="M131 43 C121 33, 124 18, 137 13 C148 23, 144 37, 131 43Z"/>
+      <path d="M137 43 C145 31, 160 30, 168 41 C158 52, 145 52, 137 43Z"/>
+      <path d="M137 48 C126 53, 116 46, 115 34 C127 31, 137 37, 137 48Z"/>
+      <circle cx="137" cy="43" r="3.1" fill="#b8922a" fill-opacity=".55"/>
+    </g>
+    <g stroke="#4a6741" stroke-width=".9" fill="none">
+      <path d="M89 76 C87 62, 91 52, 101 45"/>
+      <path d="M97 56 C86 52, 80 45, 79 36"/>
+      <circle cx="104" cy="43" r="3" fill="#d8b65a" fill-opacity=".45"/>
+      <circle cx="96" cy="38" r="2" fill="#d8b65a" fill-opacity=".45"/>
+    </g>
+  </svg>
+
+  <svg class="botanical b-tr" viewBox="0 0 200 200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#41603d" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-5 178 C25 155, 42 132, 65 102 C91 68, 119 46, 161 17"/>
+      <path d="M45 129 C25 120, 17 106, 18 92 C35 96, 47 108, 45 129Z" fill="#6d9363" fill-opacity=".18"/>
+      <path d="M65 102 C50 89, 49 73, 57 59 C71 69, 75 85, 65 102Z" fill="#6d9363" fill-opacity=".16"/>
+      <path d="M82 80 C94 67, 109 64, 123 69 C115 83, 98 88, 82 80Z" fill="#6d9363" fill-opacity=".16"/>
+      <path d="M108 57 C104 42, 112 30, 125 23 C131 38, 124 52, 108 57Z" fill="#6d9363" fill-opacity=".14"/>
+    </g>
+    <g stroke="#b8922a" stroke-width="1" fill="#faf6ee" fill-opacity=".55">
+      <path d="M131 43 C121 33, 124 18, 137 13 C148 23, 144 37, 131 43Z"/>
+      <path d="M137 43 C145 31, 160 30, 168 41 C158 52, 145 52, 137 43Z"/>
+      <path d="M137 48 C126 53, 116 46, 115 34 C127 31, 137 37, 137 48Z"/>
+      <circle cx="137" cy="43" r="3.1" fill="#b8922a" fill-opacity=".55"/>
+    </g>
+    <g stroke="#4a6741" stroke-width=".9" fill="none">
+      <path d="M89 76 C87 62, 91 52, 101 45"/>
+      <path d="M97 56 C86 52, 80 45, 79 36"/>
+      <circle cx="104" cy="43" r="3" fill="#d8b65a" fill-opacity=".45"/>
+      <circle cx="96" cy="38" r="2" fill="#d8b65a" fill-opacity=".45"/>
+    </g>
+  </svg>
+
+  <svg class="botanical b-br" viewBox="0 0 200 200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#41603d" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-5 178 C25 155, 42 132, 65 102 C91 68, 119 46, 161 17"/>
+      <path d="M45 129 C25 120, 17 106, 18 92 C35 96, 47 108, 45 129Z" fill="#6d9363" fill-opacity=".18"/>
+      <path d="M65 102 C50 89, 49 73, 57 59 C71 69, 75 85, 65 102Z" fill="#6d9363" fill-opacity=".16"/>
+      <path d="M82 80 C94 67, 109 64, 123 69 C115 83, 98 88, 82 80Z" fill="#6d9363" fill-opacity=".16"/>
+    </g>
+    <g stroke="#b8922a" stroke-width="1" fill="#faf6ee" fill-opacity=".55">
+      <path d="M108 57 C98 47, 101 32, 114 27 C125 37, 121 51, 108 57Z"/>
+      <path d="M114 57 C122 45, 137 44, 145 55 C135 66, 122 66, 114 57Z"/>
+      <path d="M114 62 C103 67, 93 60, 92 48 C104 45, 114 51, 114 62Z"/>
+      <circle cx="114" cy="57" r="3.1" fill="#b8922a" fill-opacity=".55"/>
+    </g>
+  </svg>
+
+  <div class="verse-band">
+    <p>« Un cordon triple ne se rompt pas vite. »</p>
+    <span>— Ecclésiaste 4:12 (b) —</span>
+  </div>
+
+  <div class="fp-inner">
+
+    <div class="monogram" aria-label="Monogramme Urlice et José"><span>U</span><i>&amp;</i><span>J</span></div>
+
+    <h1 class="big-title">Mariage</h1>
+
+    <div class="names">Urlice <span class="gold">&amp;</span> José</div>
+
+    <div class="orn" style="margin:6px 0 12px">
+      <svg width="180" height="14" viewBox="0 0 180 14">
+        <line x1="0" y1="7" x2="60" y2="7" stroke="#c8a96e" stroke-width="0.6"/>
+        <ellipse cx="68" cy="7" rx="6" ry="3" fill="none" stroke="#4a6741" stroke-width="0.8"/>
+        <ellipse cx="80" cy="7" rx="4" ry="2" fill="#c8a96e"/>
+        <ellipse cx="92" cy="7" rx="6" ry="3" fill="none" stroke="#4a6741" stroke-width="0.8"/>
+        <line x1="100" y1="7" x2="180" y2="7" stroke="#c8a96e" stroke-width="0.6"/>
+      </svg>
+    </div>
+
+    <p class="eyebrow">ont la joie de vous convier à leur cérémonie nuptiale</p>
+
+    <div class="invite-block">
+      <p>Animés par notre amour pour <span class="hl">Jéhovah, l'Auteur du mariage</span>, nous avons la joie de vous inviter à notre cérémonie nuptiale à la Salle du Royaume.</p>
+      <p>Un <span class="hl">discours biblique inspirant</span>, fondé sur les sages conseils de Jéhovah Dieu pour le bonheur du couple et de la famille, sera présenté à cette occasion. Nous serions très heureux de partager avec vous cette <span class="hl">journée exceptionnelle</span>.</p>
+    </div>
+
+    <hr class="rule">
+
+    <div class="info-item">
+      <div class="ico">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <div class="itxt">
+        <div class="ilbl">Date</div>
+        <div class="ival"><strong>Samedi 19 décembre 2026</strong></div>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="ico">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div class="itxt">
+        <div class="ilbl">Heure</div>
+        <div class="ival"><strong>11 h</strong></div>
+        <p class="arrival-note">Merci d’être présents 15 minutes à l’avance, afin que la cérémonie puisse commencer à l’heure.</p>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="ico">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="itxt">
+        <div class="ilbl">Lieu de la cérémonie</div>
+        <div class="ival">Salle du Royaume des Témoins de Jéhovah<br>de <strong>Godomey Cococodji Fandji</strong></div>
+        <a class="gps-link" href="https://www.google.com/maps?q=6.38685,2.260781" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ouvrir l’itinéraire
+        </a>
+      </div>
+    </div>
+
+    <div class="calendar-wrap">
+      <button class="calendar-btn" type="button" id="add-to-calendar">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="12" y1="14" x2="12" y2="19"/><line x1="9.5" y1="16.5" x2="14.5" y2="16.5"/></svg>
+        Ajouter à mon agenda
+      </button>
+    </div>
+
+    <hr class="rule">
+
+    <div class="blessing">
+      <p>Votre présence et vos prières<br>seront pour nous une grande bénédiction.</p>
+    </div>
+
+    <div class="orn" style="margin:10px 0 6px">
+      <svg width="120" height="10" viewBox="0 0 120 10"><line x1="0" y1="5" x2="50" y2="5" stroke="#c8a96e" stroke-width="0.6"/><circle cx="60" cy="5" r="2.5" fill="#c8a96e"/><line x1="70" y1="5" x2="120" y2="5" stroke="#c8a96e" stroke-width="0.6"/></svg>
+    </div>
+
+    <div class="sign">Nous comptons sur vous !</div>
+
+  </div>
+</div>
+<script>
+document.getElementById('add-to-calendar').addEventListener('click', function () {
+  const details = 'Cérémonie nuptiale d’Urlice et José. Merci d’arriver 15 minutes à l’avance. Itinéraire : https://www.google.com/maps?q=6.38685,2.260781';
+  const params = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: 'Mariage d’Urlice et José',
+    dates: '20261219T110000/20261219T130000',
+    location: 'Salle du Royaume des Témoins de Jéhovah, Godomey Cococodji Fandji',
+    details: details,
+    ctz: 'Africa/Porto-Novo'
+  });
+  window.open('https://calendar.google.com/calendar/render?' + params.toString(), '_blank', 'noopener');
+});
+</script>
+</body>
+</html>

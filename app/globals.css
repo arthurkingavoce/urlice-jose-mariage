@@ -53,41 +53,41 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* Nuit de Luxe — dark theme as default */
+/* Lumière Ivoire — light theme */
 :root {
-  --background: rgb(8 8 6);
-  --foreground: rgb(245 243 238);
-  --card: rgb(15 15 13);
-  --card-foreground: rgb(245 243 238);
-  --popover: rgb(15 15 13);
-  --popover-foreground: rgb(245 243 238);
-  --primary: rgb(245 243 238);
-  --primary-foreground: rgb(8 8 6);
-  --secondary: rgb(25 25 22);
-  --secondary-foreground: rgb(154 152 144);
-  --muted: rgb(25 25 22);
-  --muted-foreground: rgb(100 100 96);
-  --accent: rgb(37 37 32);
-  --accent-foreground: rgb(245 243 238);
+  --background: rgb(248 246 241);
+  --foreground: rgb(12 11 9);
+  --card: rgb(240 238 233);
+  --card-foreground: rgb(12 11 9);
+  --popover: rgb(240 238 233);
+  --popover-foreground: rgb(12 11 9);
+  --primary: rgb(12 11 9);
+  --primary-foreground: rgb(248 246 241);
+  --secondary: rgb(230 228 222);
+  --secondary-foreground: rgb(110 108 102);
+  --muted: rgb(230 228 222);
+  --muted-foreground: rgb(110 108 102);
+  --accent: rgb(12 11 9);
+  --accent-foreground: rgb(248 246 241);
   --destructive: rgb(180 40 40);
-  --destructive-foreground: rgb(245 243 238);
-  --border: rgb(37 37 32);
-  --input: rgb(37 37 32);
-  --ring: rgb(154 152 144);
-  --chart-1: rgb(200 190 170);
-  --chart-2: rgb(154 152 144);
-  --chart-3: rgb(100 100 96);
-  --chart-4: rgb(60 60 55);
-  --chart-5: rgb(37 37 32);
+  --destructive-foreground: rgb(248 246 241);
+  --border: rgb(210 207 200);
+  --input: rgb(210 207 200);
+  --ring: rgb(130 128 122);
+  --chart-1: rgb(60 58 52);
+  --chart-2: rgb(110 108 102);
+  --chart-3: rgb(160 158 152);
+  --chart-4: rgb(200 198 192);
+  --chart-5: rgb(210 207 200);
   --radius: 0.25rem;
-  --sidebar: rgb(15 15 13);
-  --sidebar-foreground: rgb(245 243 238);
-  --sidebar-primary: rgb(245 243 238);
-  --sidebar-primary-foreground: rgb(8 8 6);
-  --sidebar-accent: rgb(37 37 32);
-  --sidebar-accent-foreground: rgb(245 243 238);
-  --sidebar-border: rgb(37 37 32);
-  --sidebar-ring: rgb(154 152 144);
+  --sidebar: rgb(240 238 233);
+  --sidebar-foreground: rgb(12 11 9);
+  --sidebar-primary: rgb(12 11 9);
+  --sidebar-primary-foreground: rgb(248 246 241);
+  --sidebar-accent: rgb(210 207 200);
+  --sidebar-accent-foreground: rgb(12 11 9);
+  --sidebar-border: rgb(210 207 200);
+  --sidebar-ring: rgb(130 128 122);
 }
 
 @layer base {
@@ -96,8 +96,8 @@
     outline-color: color-mix(in srgb, var(--color-ring) 50%, transparent);
   }
   body {
-    background-color: rgb(8 8 6);
-    color: rgb(245 243 238);
+    background-color: rgb(248 246 241);
+    color: rgb(12 11 9);
     font-feature-settings: "rlig" 1, "calt" 1;
   }
   html {

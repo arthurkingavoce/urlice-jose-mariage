@@ -7,6 +7,7 @@ import { Menu } from "lucide-react";
 
 const links = [
   { label: "Histoire", href: "#histoire" },
+  { label: "Compte à rebours", href: "#countdown" },
   { label: "Programme", href: "#programme" },
   { label: "Galerie", href: "#galerie" },
   { label: "RSVP", href: "#rsvp" },

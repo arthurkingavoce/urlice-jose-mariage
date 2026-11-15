@@ -5,7 +5,7 @@ import { Ornament } from "./ornament";
 
 export function Lieu() {
   return (
-    <section id="lieu" className="pb-0 pt-24" style={{ backgroundColor: "rgb(8 8 6)" }}>
+    <section id="lieu" className="pb-0 pt-24" style={{ backgroundColor: "rgb(248 246 241)" }}>
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -14,13 +14,13 @@ export function Lieu() {
       >
         <p
           className="text-[10px] tracking-[4px] uppercase mb-2"
-          style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Où nous retrouver
         </p>
         <h2
           className="text-5xl"
-          style={{ color: "rgb(245 243 238)", fontFamily: "var(--font-script)" }}
+          style={{ color: "rgb(12 11 9)", fontFamily: "var(--font-script)" }}
         >
           Le Lieu
         </h2>
@@ -37,13 +37,13 @@ export function Lieu() {
       >
         <p
           className="text-xl italic text-center leading-relaxed mb-8"
-          style={{ color: "rgb(245 243 238)", fontFamily: "var(--font-serif)" }}
+          style={{ color: "rgb(12 11 9)", fontFamily: "var(--font-serif)" }}
         >
           Godomey Cococodji Fandji
           <br />
           <span
             className="text-sm not-italic"
-            style={{ color: "rgb(154 152 144)" }}
+            style={{ color: "rgb(110 108 102)" }}
           >
             Abomey-Calavi, Bénin
           </span>
@@ -59,8 +59,8 @@ export function Lieu() {
               key={i}
               className="flex items-center gap-3 py-3 text-sm"
               style={{
-                borderBottom: "1px solid rgb(37 37 32)",
-                color: "rgb(154 152 144)",
+                borderBottom: "1px solid rgb(210 207 200)",
+                color: "rgb(110 108 102)",
                 fontFamily: "var(--font-body)",
               }}
             >
@@ -76,7 +76,7 @@ export function Lieu() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         className="w-full h-72 overflow-hidden"
-        style={{ filter: "grayscale(1) invert(1) contrast(0.85)" }}
+        style={{ filter: "grayscale(1) contrast(0.9)" }}
       >
         <iframe
           src="https://maps.google.com/maps?q=Godomey,Abomey-Calavi,Benin&output=embed"

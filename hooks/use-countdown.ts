@@ -14,10 +14,13 @@ function calc(target: Date): Countdown {
   };
 }
 
+const ZERO: Countdown = { days: 0, hours: 0, mins: 0, secs: 0 };
+
 export function useCountdown(target: Date): Countdown {
-  const [state, setState] = useState<Countdown>(() => calc(target));
+  const [state, setState] = useState<Countdown>(ZERO);
 
   useEffect(() => {
+    setState(calc(target));
     const id = setInterval(() => setState(calc(target)), 1000);
     return () => clearInterval(id);
   }, [target]);

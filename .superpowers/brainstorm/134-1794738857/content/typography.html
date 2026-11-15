@@ -1,0 +1,87 @@
+<h2>Quelle typographie pour Urlice & José ?</h2>
+<p class="subtitle">Sur fond noir, la police des prénoms détermine toute l'identité visuelle du site.</p>
+
+<style>
+  .typo-card {
+    background: #0a0a0a;
+    border-radius: 10px;
+    padding: 28px 20px 20px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-height: 160px;
+    justify-content: center;
+    border: 1px solid #222;
+  }
+  .typo-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #555;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .typo-date {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #666;
+  }
+  .typo-divider {
+    width: 30px;
+    height: 1px;
+    background: #333;
+  }
+</style>
+
+<div class="options">
+
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Serif Élégant — Cormorant</h3>
+      <div class="typo-card">
+        <div class="typo-label" style="font-family:sans-serif;">Mariage de</div>
+        <div style="font-family:'Georgia',serif; font-size:36px; color:#ffffff; font-weight:300; letter-spacing:4px; font-style:italic; line-height:1;">Urlice</div>
+        <div style="font-family:'Georgia',serif; font-size:16px; color:#888; font-weight:300; letter-spacing:8px;">&amp;</div>
+        <div style="font-family:'Georgia',serif; font-size:36px; color:#ffffff; font-weight:300; letter-spacing:4px; font-style:italic; line-height:1;">José</div>
+        <div class="typo-divider"></div>
+        <div class="typo-date" style="font-family:'Georgia',serif; font-style:italic;">19 · Décembre · 2026</div>
+      </div>
+      <p style="margin-top:8px; font-size:12px;">Raffiné, intemporel, doux. Les prénoms en italique fine sur fond noir dégagent une élégance naturelle.</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Script Calligraphique — Great Vibes</h3>
+      <div class="typo-card">
+        <div class="typo-label" style="font-family:sans-serif;">Mariage de</div>
+        <div style="font-family:'Brush Script MT','Segoe Script',cursive; font-size:42px; color:#ffffff; font-weight:400; letter-spacing:2px; line-height:1.1;">Urlice</div>
+        <div style="font-family:'Georgia',serif; font-size:13px; color:#777; letter-spacing:6px;">&amp;</div>
+        <div style="font-family:'Brush Script MT','Segoe Script',cursive; font-size:42px; color:#ffffff; font-weight:400; letter-spacing:2px; line-height:1.1;">José</div>
+        <div class="typo-divider"></div>
+        <div class="typo-date" style="font-family:sans-serif; font-size:9px; letter-spacing:3px;">19 · DÉCEMBRE · 2026</div>
+      </div>
+      <p style="margin-top:8px; font-size:12px;">Romantique, manuscrit, chaleureux. La calligraphie donne un côté "carte de mariage" haut de gamme.</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Mixte — Script + Majuscules</h3>
+      <div class="typo-card">
+        <div class="typo-label" style="font-family:sans-serif; letter-spacing:4px;">MARIAGE DE</div>
+        <div style="font-family:'Brush Script MT','Segoe Script',cursive; font-size:48px; color:#ffffff; font-weight:400; line-height:1;">Urlice</div>
+        <div style="font-family:sans-serif; font-size:11px; color:#666; letter-spacing:5px; font-weight:300;">&amp;</div>
+        <div style="font-family:'Brush Script MT','Segoe Script',cursive; font-size:48px; color:#ffffff; font-weight:400; line-height:1;">José</div>
+        <div class="typo-divider"></div>
+        <div style="font-family:sans-serif; font-size:9px; letter-spacing:3px; color:#555; text-transform:uppercase;">19 Décembre 2026 · Godomey</div>
+      </div>
+      <p style="margin-top:8px; font-size:12px;">Dynamique et moderne. Script en grand pour les prénoms, sans-serif minimaliste pour les informations. Fort impact visuel.</p>
+    </div>
+  </div>
+
+</div>

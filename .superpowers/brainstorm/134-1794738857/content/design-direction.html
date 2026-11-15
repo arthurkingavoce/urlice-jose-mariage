@@ -1,0 +1,115 @@
+<h2>Quelle direction visuelle pour le site ?</h2>
+<p class="subtitle">3 ambiances noir & blanc — choisir une direction, on affinera ensuite.</p>
+
+<div class="cards">
+
+  <!-- OPTION A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#fff; border-bottom:1px solid #eee; padding:20px 16px; min-height:220px; display:flex; flex-direction:column; justify-content:space-between;">
+      <!-- Mini mockup A -->
+      <div style="font-family:'Georgia',serif; text-align:center; padding:10px 0 0;">
+        <div style="font-size:9px; letter-spacing:3px; color:#999; text-transform:uppercase; margin-bottom:6px;">19 Décembre 2026</div>
+        <div style="font-size:26px; font-weight:700; color:#111; letter-spacing:2px; line-height:1.1;">Urlice<br><span style="font-weight:300; font-style:italic; font-size:18px; letter-spacing:4px;">&amp;</span><br>José</div>
+        <div style="width:40px; height:1px; background:#111; margin:10px auto;"></div>
+        <div style="font-size:8px; letter-spacing:2px; color:#555; text-transform:uppercase;">Godomey · Cococodji</div>
+      </div>
+      <!-- Fake illustration placeholder -->
+      <div style="margin:14px auto 0; width:80px; height:90px; border:1px solid #ddd; display:flex; align-items:center; justify-content:center; border-radius:2px; background:#fafafa;">
+        <svg width="60" height="80" viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="30" cy="18" rx="10" ry="12" stroke="#111" stroke-width="1.2" fill="none"/>
+          <line x1="20" y1="30" x2="12" y2="55" stroke="#111" stroke-width="1.2"/>
+          <line x1="40" y1="30" x2="48" y2="55" stroke="#111" stroke-width="1.2"/>
+          <line x1="22" y1="38" x2="38" y2="38" stroke="#111" stroke-width="1"/>
+          <line x1="20" y1="30" x2="40" y2="30" stroke="#111" stroke-width="1.2"/>
+          <path d="M12 55 Q30 70 48 55" stroke="#111" stroke-width="1.2" fill="none"/>
+          <line x1="22" y1="55" x2="20" y2="78" stroke="#111" stroke-width="1.2"/>
+          <line x1="38" y1="55" x2="40" y2="78" stroke="#111" stroke-width="1.2"/>
+        </svg>
+      </div>
+      <div style="text-align:center; margin-top:10px;">
+        <div style="display:inline-block; border:1px solid #111; padding:4px 14px; font-size:8px; letter-spacing:2px; color:#111; text-transform:uppercase;">Confirmer ma présence</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Blanc Élégant</h3>
+      <p>Fond blanc pur, illustrations pleine page, typo serif fine. Les illustrations apparaissent progressivement au scroll (stroke-draw animation). Ambiance : <em>magazine de luxe</em>.</p>
+    </div>
+  </div>
+
+  <!-- OPTION B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0a0a0a; padding:20px 16px; min-height:220px; display:flex; flex-direction:column; justify-content:space-between; border-bottom:1px solid #333;">
+      <div style="font-family:'Georgia',serif; text-align:center; padding:10px 0 0;">
+        <div style="font-size:9px; letter-spacing:3px; color:#666; text-transform:uppercase; margin-bottom:6px;">19 Décembre 2026</div>
+        <div style="font-size:26px; font-weight:700; color:#fff; letter-spacing:2px; line-height:1.1;">Urlice<br><span style="font-weight:300; font-style:italic; font-size:18px; letter-spacing:4px; color:#aaa;">&amp;</span><br>José</div>
+        <div style="width:40px; height:1px; background:#fff; margin:10px auto; opacity:0.3;"></div>
+        <div style="font-size:8px; letter-spacing:2px; color:#777; text-transform:uppercase;">Godomey · Cococodji</div>
+      </div>
+      <!-- Illustration inversée -->
+      <div style="margin:14px auto 0; width:80px; height:90px; display:flex; align-items:center; justify-content:center;">
+        <svg width="60" height="80" viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="30" cy="18" rx="10" ry="12" stroke="#fff" stroke-width="1.2" fill="none"/>
+          <line x1="20" y1="30" x2="12" y2="55" stroke="#fff" stroke-width="1.2"/>
+          <line x1="40" y1="30" x2="48" y2="55" stroke="#fff" stroke-width="1.2"/>
+          <line x1="22" y1="38" x2="38" y2="38" stroke="#fff" stroke-width="1"/>
+          <line x1="20" y1="30" x2="40" y2="30" stroke="#fff" stroke-width="1.2"/>
+          <path d="M12 55 Q30 70 48 55" stroke="#fff" stroke-width="1.2" fill="none"/>
+          <line x1="22" y1="55" x2="20" y2="78" stroke="#fff" stroke-width="1.2"/>
+          <line x1="38" y1="55" x2="40" y2="78" stroke="#fff" stroke-width="1.2"/>
+        </svg>
+      </div>
+      <!-- Particules simulées -->
+      <div style="text-align:center; position:relative;">
+        <span style="position:absolute;top:-20px;left:30%;font-size:6px;color:#fff;opacity:0.4;">✦</span>
+        <span style="position:absolute;top:-30px;left:60%;font-size:4px;color:#fff;opacity:0.3;">✦</span>
+        <span style="position:absolute;top:-15px;left:15%;font-size:5px;color:#fff;opacity:0.5;">✦</span>
+        <div style="display:inline-block; border:1px solid #fff; padding:4px 14px; font-size:8px; letter-spacing:2px; color:#fff; text-transform:uppercase; opacity:0.8;">Confirmer ma présence</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Nuit de Luxe</h3>
+      <p>Fond noir profond, illustrations inversées en blanc, particules dorées animées. Entrée dramatique avec effet de rideau. Ambiance : <em>soirée gala prestige</em>.</p>
+    </div>
+  </div>
+
+  <!-- OPTION C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#fff; padding:0; min-height:220px; overflow:hidden; border-bottom:1px solid #eee;">
+      <!-- Split sections -->
+      <div style="background:#111; padding:14px 16px 12px; text-align:center;">
+        <div style="font-size:9px; letter-spacing:3px; color:#888; text-transform:uppercase; margin-bottom:4px;">19 · 12 · 2026</div>
+        <div style="font-size:22px; font-weight:700; color:#fff; letter-spacing:3px;">URLICE & JOSÉ</div>
+      </div>
+      <div style="background:#fff; padding:12px 16px; display:flex; align-items:center; gap:10px;">
+        <div style="width:50px; height:60px; flex-shrink:0;">
+          <svg width="50" height="60" viewBox="0 0 50 60" fill="none">
+            <ellipse cx="25" cy="12" rx="8" ry="10" stroke="#111" stroke-width="1.2" fill="none"/>
+            <line x1="17" y1="22" x2="11" y2="42" stroke="#111" stroke-width="1.2"/>
+            <line x1="33" y1="22" x2="39" y2="42" stroke="#111" stroke-width="1.2"/>
+            <line x1="17" y1="22" x2="33" y2="22" stroke="#111" stroke-width="1.2"/>
+            <path d="M11 42 Q25 54 39 42" stroke="#111" stroke-width="1.2" fill="none"/>
+          </svg>
+        </div>
+        <div>
+          <div style="font-size:8px; letter-spacing:1px; text-transform:uppercase; color:#999; margin-bottom:2px;">Programme</div>
+          <div style="font-size:10px; color:#111; line-height:1.6;">10h00 — Cérémonie<br>14h00 — Réception<br>20h00 — Soirée</div>
+        </div>
+      </div>
+      <div style="background:#111; padding:10px 16px; text-align:center;">
+        <div style="font-size:8px; letter-spacing:2px; color:#888; text-transform:uppercase; margin-bottom:4px;">Godomey · Bénin</div>
+        <div style="display:inline-flex; gap:8px; align-items:center;">
+          <div style="width:20px;height:1px;background:#555;"></div>
+          <div style="font-size:14px;color:#fff;">📍</div>
+          <div style="width:20px;height:1px;background:#555;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Contrastes Vifs</h3>
+      <p>Sections alternées noir/blanc avec transitions dynamiques au scroll. Typographie bold + serif. Chaque section claque visuellement. Ambiance : <em>éditorial moderne</em>.</p>
+    </div>
+  </div>
+
+</div>
+
+<p style="text-align:center; margin-top:16px; font-size:12px; color:#888;">Clique sur ton option préférée ou dis-moi en réponse.</p>

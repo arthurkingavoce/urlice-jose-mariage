@@ -43,19 +43,19 @@ function TimelineItem({ event, index }: { event: (typeof events)[0]; index: numb
       <div className={`flex-1 ${isLeft ? "text-right" : "text-left"}`}>
         <p
           className="text-[10px] tracking-[3px] uppercase mb-1"
-          style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           {event.label}
         </p>
         <h3
           className="text-lg italic mb-2"
-          style={{ color: "rgb(245 243 238)", fontFamily: "var(--font-serif)" }}
+          style={{ color: "rgb(12 11 9)", fontFamily: "var(--font-serif)" }}
         >
           {event.title}
         </h3>
         <p
           className="text-sm leading-relaxed"
-          style={{ color: "rgb(154 152 144)", fontFamily: "var(--font-body)" }}
+          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           {event.desc}
         </p>
@@ -67,7 +67,7 @@ function TimelineItem({ event, index }: { event: (typeof events)[0]; index: numb
           viewport={{ once: true }}
           transition={{ delay: index * 0.1 + 0.3 }}
           className="w-2.5 h-2.5 rounded-full border bg-card"
-          style={{ borderColor: "rgb(100 100 96)" }}
+          style={{ borderColor: "rgb(110 108 102)" }}
         />
       </div>
     </motion.div>
@@ -85,13 +85,13 @@ export function Histoire() {
       >
         <p
           className="text-[10px] tracking-[4px] uppercase mb-2"
-          style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Depuis le début
         </p>
         <h2
           className="text-5xl"
-          style={{ color: "rgb(245 243 238)", fontFamily: "var(--font-script)" }}
+          style={{ color: "rgb(12 11 9)", fontFamily: "var(--font-script)" }}
         >
           Notre Histoire
         </h2>
@@ -103,7 +103,7 @@ export function Histoire() {
       <div className="relative max-w-sm mx-auto px-6">
         <div
           className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2"
-          style={{ background: "linear-gradient(to bottom, transparent, rgb(37 37 32), rgb(37 37 32), transparent)" }}
+          style={{ background: "linear-gradient(to bottom, transparent, rgb(210 207 200), rgb(210 207 200), transparent)" }}
         />
         {events.map((e, i) => (
           <TimelineItem key={i} event={e} index={i} />

@@ -36,7 +36,11 @@ export function getMessages(): Message[] {
 export function saveMessage(msg: Omit<Message, "id">): void {
   const msgs = getMessages();
   msgs.push({ ...msg, id: Date.now().toString() });
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(msgs));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(msgs));
+  } catch {
+    // storage quota exceeded — silently fail
+  }
 }
 
 export function LivreDor() {
@@ -47,7 +51,7 @@ export function LivreDor() {
   useEffect(() => {
     const stored = getMessages();
     if (stored.length > 0) {
-      setMessages((prev) => [...stored, ...prev]);
+      setMessages([...stored, ...INITIAL]);
     }
   }, []);
 
@@ -75,13 +79,13 @@ export function LivreDor() {
       >
         <p
           className="text-[10px] tracking-[4px] uppercase mb-2"
-          style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Vos mots pour eux
         </p>
         <h2
           className="text-5xl"
-          style={{ color: "rgb(245 243 238)", fontFamily: "var(--font-script)" }}
+          style={{ color: "rgb(12 11 9)", fontFamily: "var(--font-script)" }}
         >
           Livre d&apos;or
         </h2>
@@ -94,7 +98,7 @@ export function LivreDor() {
         <div>
           <label
             className="text-[10px] tracking-[3px] uppercase block mb-1"
-            style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+            style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
           >
             Votre prénom
           </label>
@@ -102,10 +106,11 @@ export function LivreDor() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Marie…"
+            maxLength={100}
             className="bg-transparent border-0 border-b rounded-none px-0 text-base focus-visible:ring-0"
             style={{
-              borderColor: "rgb(37 37 32)",
-              color: "rgb(245 243 238)",
+              borderColor: "rgb(210 207 200)",
+              color: "rgb(12 11 9)",
               fontFamily: "var(--font-body)",
             }}
           />
@@ -113,7 +118,7 @@ export function LivreDor() {
         <div>
           <label
             className="text-[10px] tracking-[3px] uppercase block mb-1"
-            style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+            style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
           >
             Votre message
           </label>
@@ -122,10 +127,11 @@ export function LivreDor() {
             onChange={(e) => setText(e.target.value)}
             placeholder="Vos vœux les plus sincères…"
             rows={3}
+            maxLength={500}
             className="bg-transparent border-0 border-b rounded-none px-0 text-base focus-visible:ring-0 resize-none"
             style={{
-              borderColor: "rgb(37 37 32)",
-              color: "rgb(245 243 238)",
+              borderColor: "rgb(210 207 200)",
+              color: "rgb(12 11 9)",
               fontFamily: "var(--font-body)",
             }}
           />
@@ -135,8 +141,8 @@ export function LivreDor() {
           className="w-full text-[10px] tracking-[4px] uppercase py-5 rounded-none"
           style={{
             fontFamily: "var(--font-body)",
-            backgroundColor: "rgb(245 243 238)",
-            color: "rgb(8 8 6)",
+            backgroundColor: "rgb(12 11 9)",
+            color: "rgb(248 246 241)",
           }}
         >
           Laisser mon message
@@ -151,26 +157,26 @@ export function LivreDor() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               className="p-5 relative"
-              style={{ backgroundColor: "rgba(8,8,6,0.5)" }}
+              style={{ backgroundColor: "rgba(220,218,213,0.5)" }}
             >
               <span
                 className="absolute top-3 left-4 text-3xl leading-none"
                 style={{
                   fontFamily: "var(--font-serif)",
-                  color: "rgba(100,100,96,0.3)",
+                  color: "rgba(110,108,102,0.3)",
                 }}
               >
                 &ldquo;
               </span>
               <p
                 className="text-sm italic leading-relaxed pt-2"
-                style={{ color: "rgb(154 152 144)", fontFamily: "var(--font-body)" }}
+                style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
               >
                 {msg.text}
               </p>
               <p
                 className="text-[9px] tracking-[2px] uppercase mt-3"
-                style={{ color: "rgba(100,100,96,0.6)", fontFamily: "var(--font-body)" }}
+                style={{ color: "rgba(110,108,102,0.6)", fontFamily: "var(--font-body)" }}
               >
                 — {msg.name}
               </p>

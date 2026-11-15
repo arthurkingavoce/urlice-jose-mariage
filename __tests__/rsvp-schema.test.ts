@@ -1,4 +1,4 @@
-import { rsvpSchema } from "@/components/rsvp";
+import { rsvpSchema } from "@/lib/rsvp-schema";
 
 describe("rsvpSchema", () => {
   it("accepte une réponse valide présent", () => {

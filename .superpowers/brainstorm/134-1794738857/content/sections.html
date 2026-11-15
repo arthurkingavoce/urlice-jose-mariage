@@ -1,0 +1,67 @@
+<h2>Quelles sections pour le site ?</h2>
+<p class="subtitle">Choisis la formule qui correspond au niveau de contenu voulu. Tu pourras retirer/ajouter après.</p>
+
+<style>
+.section-map { display:flex; flex-direction:column; gap:4px; padding:12px 16px; border-radius:6px; }
+.sm-row { display:flex; align-items:center; gap:8px; padding:5px 10px; border-radius:4px; font-size:11px; font-weight:500; }
+.sm-icon { width:18px; height:18px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:50%; font-size:9px; }
+.tag-core { background:#111; color:#fff; font-size:8px; padding:1px 5px; border-radius:10px; margin-left:auto; }
+.tag-extra { background:#eee; color:#666; font-size:8px; padding:1px 5px; border-radius:10px; margin-left:auto; }
+</style>
+
+<div class="options">
+
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Essentiel (5 sections)</h3>
+      <p>L'invitation parfaite, rien de superflu.</p>
+      <div class="section-map" style="background:#f7f7f7; margin-top:8px;">
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">✦</div> Hero — Couple + Stroke Draw + Prénoms <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">📅</div> Compte à rebours + Date + Lieu <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">🗓</div> Programme de la journée <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">✉</div> RSVP — Formulaire de confirmation <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">📍</div> Carte & Accès au lieu <span class="tag-core">incontournable</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Complet (8 sections)</h3>
+      <p>L'expérience immersive recommandée.</p>
+      <div class="section-map" style="background:#f7f7f7; margin-top:8px;">
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">✦</div> Hero — Stroke Draw animé <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">💫</div> Notre Histoire — Timeline animée <span class="tag-extra">+</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">📅</div> Compte à rebours + Date + Lieu <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">🗓</div> Programme de la journée <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">🖼</div> Galerie illustrations <span class="tag-extra">+</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">✉</div> RSVP <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">📍</div> Carte & Accès <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">💬</div> Livre d'or <span class="tag-extra">+</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Premium (10 sections)</h3>
+      <p>Tout, pour une expérience inoubliable.</p>
+      <div class="section-map" style="background:#f7f7f7; margin-top:8px;">
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">✦</div> Hero — Stroke Draw animé <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">💫</div> Notre Histoire <span class="tag-extra">+</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">📅</div> Compte à rebours <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">🗓</div> Programme <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">🖼</div> Galerie illustrations <span class="tag-extra">+</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">👗</div> Dress Code & Infos pratiques <span class="tag-extra">+</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">✉</div> RSVP personnalisé par invité <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">📍</div> Carte & Accès <span class="tag-core">incontournable</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">🎵</div> Playlist — Suggérer une chanson <span class="tag-extra">+</span></div>
+        <div class="sm-row"><div class="sm-icon" style="background:#111;color:#fff;">💬</div> Livre d'or <span class="tag-extra">+</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>

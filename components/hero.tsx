@@ -53,7 +53,7 @@ function ParticlesCanvas() {
         const alpha = p.opacity * Math.sin((p.life / p.maxLife) * Math.PI);
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(245,243,238,${alpha.toFixed(3)})`;
+        ctx.fillStyle = `rgba(12,11,9,${alpha.toFixed(3)})`;
         ctx.fill();
         if (p.life >= p.maxLife) Object.assign(p, make(), { life: 0 });
       }
@@ -75,7 +75,7 @@ export function Hero() {
     <section
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-end pb-16 overflow-hidden"
-      style={{ backgroundColor: "rgb(8 8 6)" }}
+      style={{ backgroundColor: "rgb(248 246 241)" }}
     >
       <ParticlesCanvas />
 
@@ -94,12 +94,12 @@ export function Hero() {
             height={600}
             priority
             className="h-full w-auto object-contain"
-            style={{ filter: "invert(1) brightness(0.88)", mixBlendMode: "screen" }}
+            style={{ filter: "grayscale(1) contrast(1.1)", mixBlendMode: "multiply" }}
           />
           {/* Fade bottom */}
           <div
             className="absolute bottom-0 left-0 right-0 h-2/5"
-            style={{ background: "linear-gradient(to top, rgb(8 8 6), transparent)" }}
+            style={{ background: "linear-gradient(to top, rgb(248 246 241), transparent)" }}
           />
         </motion.div>
       </div>
@@ -111,7 +111,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 0.8 }}
           className="text-[10px] tracking-[5px] uppercase mb-1"
-          style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Vous êtes invités au mariage de
         </motion.p>
@@ -120,12 +120,12 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.2, duration: 0.9 }}
-          style={{ fontSize: "clamp(64px, 18vw, 96px)", lineHeight: 1, fontFamily: "var(--font-script)", color: "rgb(245 243 238)" }}
+          style={{ fontSize: "clamp(64px, 18vw, 96px)", lineHeight: 1, fontFamily: "var(--font-script)", color: "rgb(12 11 9)" }}
         >
           Urlice
           <span
             className="block italic my-1"
-            style={{ fontFamily: "var(--font-serif)", fontSize: "18px", letterSpacing: "8px", color: "rgb(100 100 96)" }}
+            style={{ fontFamily: "var(--font-serif)", fontSize: "18px", letterSpacing: "8px", color: "rgb(110 108 102)" }}
           >
             &amp;
           </span>
@@ -137,7 +137,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.5, duration: 0.8 }}
           className="text-[11px] tracking-[4px] uppercase mt-4"
-          style={{ color: "rgb(154 152 144)", fontFamily: "var(--font-body)" }}
+          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           19 · Décembre · 2026 · Godomey, Bénin
         </motion.p>
@@ -152,7 +152,7 @@ export function Hero() {
       >
         <span
           className="text-[9px] tracking-[3px] uppercase"
-          style={{ color: "rgb(74 74 70)", fontFamily: "var(--font-body)" }}
+          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Découvrir
         </span>

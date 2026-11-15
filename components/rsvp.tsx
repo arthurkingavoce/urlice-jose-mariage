@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Form,
@@ -24,15 +23,7 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Ornament } from "./ornament";
-
-export const rsvpSchema = z.object({
-  name: z.string().min(2, "Veuillez indiquer votre nom"),
-  attendance: z.enum(["yes", "no"]),
-  guests: z.string(),
-  message: z.string().optional(),
-});
-
-type RsvpValues = z.infer<typeof rsvpSchema>;
+import { rsvpSchema, type RsvpValues } from "@/lib/rsvp-schema";
 
 export function Rsvp() {
   const [submitted, setSubmitted] = useState(false);
@@ -58,13 +49,13 @@ export function Rsvp() {
       >
         <p
           className="text-[10px] tracking-[4px] uppercase mb-2"
-          style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Confirmez votre présence
         </p>
         <h2
           className="text-5xl"
-          style={{ color: "rgb(245 243 238)", fontFamily: "var(--font-script)" }}
+          style={{ color: "rgb(12 11 9)", fontFamily: "var(--font-script)" }}
         >
           RSVP
         </h2>
@@ -73,10 +64,10 @@ export function Rsvp() {
         </div>
         <p
           className="text-sm mt-2 px-6"
-          style={{ color: "rgb(154 152 144)", fontFamily: "var(--font-body)" }}
+          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Merci de confirmer avant le{" "}
-          <strong style={{ color: "rgb(245 243 238)" }}>1er Décembre 2026</strong>
+          <strong style={{ color: "rgb(12 11 9)" }}>1er Décembre 2026</strong>
         </p>
       </motion.div>
 
@@ -93,7 +84,7 @@ export function Rsvp() {
                       <FormItem>
                         <FormLabel
                           className="text-[10px] tracking-[3px] uppercase"
-                          style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+                          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
                         >
                           Votre nom complet
                         </FormLabel>
@@ -103,8 +94,8 @@ export function Rsvp() {
                             placeholder="Famille Amoussou…"
                             className="bg-transparent border-0 border-b rounded-none px-0 text-base focus-visible:ring-0"
                             style={{
-                              borderColor: "rgb(37 37 32)",
-                              color: "rgb(245 243 238)",
+                              borderColor: "rgb(210 207 200)",
+                              color: "rgb(12 11 9)",
                               fontFamily: "var(--font-body)",
                             }}
                           />
@@ -123,7 +114,7 @@ export function Rsvp() {
                       <FormItem>
                         <FormLabel
                           className="text-[10px] tracking-[3px] uppercase"
-                          style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+                          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
                         >
                           Serez-vous présent(e) ?
                         </FormLabel>
@@ -139,9 +130,9 @@ export function Rsvp() {
                               className="flex-1 py-2.5 border text-[10px] tracking-[3px] uppercase transition-all duration-200"
                               style={{
                                 fontFamily: "var(--font-body)",
-                                borderColor: attendance === val ? "rgb(245 243 238)" : "rgb(37 37 32)",
-                                background: attendance === val ? "rgb(245 243 238)" : "transparent",
-                                color: attendance === val ? "rgb(8 8 6)" : "rgb(154 152 144)",
+                                borderColor: attendance === val ? "rgb(12 11 9)" : "rgb(210 207 200)",
+                                background: attendance === val ? "rgb(12 11 9)" : "transparent",
+                                color: attendance === val ? "rgb(248 246 241)" : "rgb(110 108 102)",
                               }}
                             >
                               {val === "yes" ? "Avec joie ✓" : "Dans le cœur ✗"}
@@ -160,7 +151,7 @@ export function Rsvp() {
                         <FormItem>
                           <FormLabel
                             className="text-[10px] tracking-[3px] uppercase"
-                            style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+                            style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
                           >
                             Nombre de personnes
                           </FormLabel>
@@ -169,8 +160,8 @@ export function Rsvp() {
                               <SelectTrigger
                                 className="bg-transparent border-0 border-b rounded-none px-0 focus:ring-0"
                                 style={{
-                                  borderColor: "rgb(37 37 32)",
-                                  color: "rgb(245 243 238)",
+                                  borderColor: "rgb(210 207 200)",
+                                  color: "rgb(12 11 9)",
                                   fontFamily: "var(--font-body)",
                                 }}
                               >
@@ -178,7 +169,7 @@ export function Rsvp() {
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent
-                              style={{ backgroundColor: "rgb(15 15 13)", borderColor: "rgb(37 37 32)" }}
+                              style={{ backgroundColor: "rgb(240 238 233)", borderColor: "rgb(210 207 200)" }}
                             >
                               {["1", "2", "3", "4", "5+"].map((v) => (
                                 <SelectItem
@@ -203,7 +194,7 @@ export function Rsvp() {
                       <FormItem>
                         <FormLabel
                           className="text-[10px] tracking-[3px] uppercase"
-                          style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+                          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
                         >
                           Un message (optionnel)
                         </FormLabel>
@@ -214,8 +205,8 @@ export function Rsvp() {
                             rows={3}
                             className="bg-transparent border-0 border-b rounded-none px-0 text-base focus-visible:ring-0 resize-none"
                             style={{
-                              borderColor: "rgb(37 37 32)",
-                              color: "rgb(245 243 238)",
+                              borderColor: "rgb(210 207 200)",
+                              color: "rgb(12 11 9)",
                               fontFamily: "var(--font-body)",
                             }}
                           />
@@ -229,8 +220,8 @@ export function Rsvp() {
                     className="w-full text-[10px] tracking-[4px] uppercase py-5 rounded-none mt-2"
                     style={{
                       fontFamily: "var(--font-body)",
-                      backgroundColor: "rgb(245 243 238)",
-                      color: "rgb(8 8 6)",
+                      backgroundColor: "rgb(12 11 9)",
+                      color: "rgb(248 246 241)",
                     }}
                   >
                     Confirmer ma présence
@@ -247,13 +238,13 @@ export function Rsvp() {
             >
               <h3
                 className="text-5xl mb-4"
-                style={{ color: "rgb(245 243 238)", fontFamily: "var(--font-script)" }}
+                style={{ color: "rgb(12 11 9)", fontFamily: "var(--font-script)" }}
               >
                 Merci !
               </h3>
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "rgb(154 152 144)", fontFamily: "var(--font-body)" }}
+                style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
               >
                 Votre présence nous touche profondément.
                 <br />

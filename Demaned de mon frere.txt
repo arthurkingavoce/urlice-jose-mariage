@@ -1,0 +1,7 @@
+lien personnalisé par invité ou par famille. C’est l’idée la plus facile à reprendre : ton-site/?invite=famille-amoussou. Un petit script lit ce paramètre et affiche « Cher(e) famille Amoussou… » sur l’enveloppe d’ouverture. Tu peux envoyer chaque lien par WhatsApp. Ça fait un effet « fait pour vous » et ça te permet de savoir qui a ouvert l’invitation.
+Un RSVP simplifié, relié à un Google Sheet. Tu utilises déjà Google Apps Script pour le calendrier. Tu peux ajouter un formulaire à trois champs (nom, présent ou non, nombre de personnes), enregistré dans un Sheet. Tu obtiens ainsi ta liste de confirmés en direct. Elle peut alimenter ton plan de table de 20 tables, qui est déjà sous Excel.
+Une seule page défilante. Mets le programme du 19 décembre, la carte Google Maps du lieu à Godomey Cococodji Fandji et le bouton « Ajouter au calendrier » sur la même page, dans cet ordre.
+Un livre d’or de vœux. Un champ « Laissez un message aux mariés », enregistré dans le même Sheet. Tu pourras relire les messages après la fête.
+
+Une version bilingue si besoin. Un bouton FR / EN ou FR / langue locale si une partie de la famille ou des invités le demande.
+La musique d’ambiance. Si tu en ajoutes, mets une lecture déclenchée par un bouton. Les navigateurs mobiles bloquent le démarrage automatique du son.

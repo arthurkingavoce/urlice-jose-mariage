@@ -13,13 +13,13 @@ function Unit({ value, label }: { value: number; label: string }) {
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
         className="text-5xl font-bold leading-none tracking-tighter"
-        style={{ color: "rgb(245 243 238)", fontFamily: "var(--font-serif)" }}
+        style={{ color: "rgb(12 11 9)", fontFamily: "var(--font-serif)" }}
       >
         {String(value).padStart(2, "0")}
       </motion.span>
       <span
         className="text-[8px] tracking-[3px] uppercase"
-        style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+        style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
       >
         {label}
       </span>
@@ -28,11 +28,11 @@ function Unit({ value, label }: { value: number; label: string }) {
 }
 
 export function Countdown() {
-  const target = useMemo(() => new Date("2026-12-19T10:00:00"), []);
+  const target = useMemo(() => new Date("2026-12-19T10:00:00+01:00"), []);
   const { days, hours, mins, secs } = useCountdown(target);
 
   return (
-    <section id="countdown" className="py-20 text-center" style={{ backgroundColor: "rgb(8 8 6)" }}>
+    <section id="countdown" className="py-20 text-center" style={{ backgroundColor: "rgb(248 246 241)" }}>
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export function Countdown() {
       >
         <p
           className="text-[10px] tracking-[4px] uppercase mb-10"
-          style={{ color: "rgb(100 100 96)", fontFamily: "var(--font-body)" }}
+          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Plus que
         </p>
@@ -50,21 +50,21 @@ export function Countdown() {
           <Unit value={days} label="Jours" />
           <span
             className="text-4xl mt-1"
-            style={{ color: "rgba(100,100,96,0.4)", fontFamily: "var(--font-serif)" }}
+            style={{ color: "rgba(110,108,102,0.4)", fontFamily: "var(--font-serif)" }}
           >
             :
           </span>
           <Unit value={hours} label="Heures" />
           <span
             className="text-4xl mt-1"
-            style={{ color: "rgba(100,100,96,0.4)", fontFamily: "var(--font-serif)" }}
+            style={{ color: "rgba(110,108,102,0.4)", fontFamily: "var(--font-serif)" }}
           >
             :
           </span>
           <Unit value={mins} label="Min" />
           <span
             className="text-4xl mt-1"
-            style={{ color: "rgba(100,100,96,0.4)", fontFamily: "var(--font-serif)" }}
+            style={{ color: "rgba(110,108,102,0.4)", fontFamily: "var(--font-serif)" }}
           >
             :
           </span>
@@ -76,7 +76,7 @@ export function Countdown() {
         </div>
         <p
           className="text-3xl"
-          style={{ color: "rgb(154 152 144)", fontFamily: "var(--font-script)" }}
+          style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-script)" }}
         >
           avant le grand jour
         </p>

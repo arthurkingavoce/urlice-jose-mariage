@@ -33,7 +33,7 @@ export function Footer() {
         <br />
         <span
           className="not-italic text-[10px] tracking-[2px] uppercase"
-          style={{ color: "rgb(74 74 70)" }}
+          style={{ color: "rgb(110 108 102)" }}
         >
           — 1 Corinthiens 13
         </span>

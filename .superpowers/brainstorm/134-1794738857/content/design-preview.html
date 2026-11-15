@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Preview — Urlice & José</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background: #1a1a1a; font-family: 'Cormorant Garamond', serif; color: #fff; padding: 32px 16px; }
+
+h2 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: #f5f3ee; margin-bottom: 6px; letter-spacing: 1px; }
+.subtitle { font-size: 13px; color: #888; margin-bottom: 32px; }
+
+.phone-frame {
+  width: 320px;
+  min-height: 580px;
+  border: 2px solid #333;
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+  background: #080806;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  flex-shrink: 0;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 10px; left: 50%;
+  transform: translateX(-50%);
+  width: 80px; height: 18px;
+  background: #080806;
+  border-radius: 10px;
+  z-index: 10;
+  border: 2px solid #1a1a1a;
+}
+
+.section-label {
+  font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+  color: #555; margin: 24px 0 12px;
+}
+
+/* ---- HERO SCREEN ---- */
+.hero-screen {
+  width: 100%; height: 580px;
+  background: #080806;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: flex-end;
+  padding-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-particles {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.03) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 80%, rgba(255,255,255,0.02) 0%, transparent 50%);
+}
+.hero-particles::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px);
+  background-size: 180px 180px, 240px 240px, 120px 120px;
+  background-position: 20px 30px, 80px 100px, 140px 60px;
+  animation: float 8s ease-in-out infinite;
+}
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+.hero-illus {
+  position: absolute;
+  top: 30px; left: 50%;
+  transform: translateX(-50%);
+  width: 200px; height: 310px;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0.9;
+}
+.hero-illus img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: invert(1) brightness(0.88);
+  mix-blend-mode: screen;
+}
+.hero-illus::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: -20px; right: -20px;
+  height: 60%;
+  background: linear-gradient(to top, #080806 20%, transparent);
+}
+
+.hero-text {
+  position: relative; z-index: 2;
+  text-align: center;
+}
+.hero-eyebrow-s {
+  font-size: 7px; letter-spacing: 4px; color: #555; text-transform: uppercase; margin-bottom: 2px;
+}
+.hero-name-big {
+  font-family: 'Great Vibes', cursive;
+  font-size: 56px; color: #f5f3ee; line-height: 0.95;
+}
+.hero-amp {
+  font-family: 'Playfair Display', serif;
+  font-size: 11px; letter-spacing: 6px; color: #666;
+  display: block; margin: 1px 0;
+}
+.hero-date-s {
+  font-size: 8px; letter-spacing: 3px; color: #888; text-transform: uppercase; margin-top: 10px;
+}
+.hero-scroll-s {
+  margin-top: 16px;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.hero-scroll-s span { font-size: 6px; letter-spacing: 2px; color: #444; text-transform: uppercase; }
+.scroll-line-s { width: 1px; height: 24px; background: linear-gradient(to bottom, #444, transparent); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:0.3} 50%{opacity:0.9} }
+
+/* ---- COUNTDOWN ---- */
+.countdown-screen {
+  width: 100%; padding: 32px 20px;
+  background: #080806;
+  text-align: center;
+}
+.cd-label { font-size: 7px; letter-spacing: 3px; color: #555; text-transform: uppercase; margin-bottom: 20px; }
+.cd-row { display: flex; justify-content: center; gap: 6px; align-items: flex-start; }
+.cd-unit { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.cd-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: #f5f3ee; line-height: 1; letter-spacing: -1px; }
+.cd-lbl { font-size: 6px; letter-spacing: 2px; color: #555; text-transform: uppercase; }
+.cd-sep { font-family: 'Playfair Display', serif; font-size: 28px; color: #333; line-height: 1.2; padding-top: 2px; }
+.cd-title { font-family: 'Great Vibes', cursive; font-size: 22px; color: #666; margin-top: 16px; }
+
+/* ---- PROGRAMME ---- */
+.prog-screen { width: 100%; padding: 28px 20px; background: #0f0f0d; }
+.prog-header { text-align: center; margin-bottom: 24px; }
+.prog-eyebrow { font-size: 7px; letter-spacing: 3px; color: #555; text-transform: uppercase; margin-bottom: 4px; }
+.prog-title { font-family: 'Great Vibes', cursive; font-size: 32px; color: #f5f3ee; }
+.prog-line-wrap { position: relative; padding-left: 20px; }
+.prog-vline { position: absolute; left: 4px; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, #2a2a2a 10%, #2a2a2a 90%, transparent); }
+.prog-item { display: flex; gap: 12px; margin-bottom: 20px; position: relative; }
+.prog-dot { position: absolute; left: -24px; top: 5px; width: 7px; height: 7px; border-radius: 50%; border: 1px solid #444; background: #0f0f0d; }
+.prog-time { font-size: 10px; letter-spacing: 1px; color: #555; white-space: nowrap; padding-top: 1px; min-width: 36px; }
+.prog-name { font-family: 'Playfair Display', serif; font-size: 12px; font-style: italic; color: #d5d2cc; }
+.prog-desc { font-size: 10px; color: #666; line-height: 1.4; margin-top: 2px; }
+
+/* ---- RSVP ---- */
+.rsvp-screen { width: 100%; padding: 28px 20px; background: #0f0f0d; }
+.rsvp-header { text-align: center; margin-bottom: 24px; }
+.rsvp-eyebrow { font-size: 7px; letter-spacing: 3px; color: #555; text-transform: uppercase; margin-bottom: 4px; }
+.rsvp-title { font-family: 'Great Vibes', cursive; font-size: 32px; color: #f5f3ee; }
+.form-label-s { font-size: 7px; letter-spacing: 2px; color: #555; text-transform: uppercase; display: block; margin-bottom: 6px; }
+.form-input-s { width: 100%; background: transparent; border: none; border-bottom: 1px solid #222; color: #d5d2cc; font-family: 'Cormorant Garamond', serif; font-size: 13px; padding: 6px 0; outline: none; }
+.form-group-s { margin-bottom: 16px; }
+.attend-row { display: flex; gap: 8px; }
+.attend-btn { flex: 1; padding: 8px; border: 1px solid #222; background: transparent; color: #666; font-size: 7px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; font-family: inherit; }
+.attend-btn.active { background: #f5f3ee; color: #080806; border-color: #f5f3ee; }
+.submit-btn { width: 100%; padding: 12px; background: #f5f3ee; color: #080806; border: none; font-family: 'Cormorant Garamond', serif; font-size: 9px; letter-spacing: 4px; text-transform: uppercase; cursor: pointer; margin-top: 8px; }
+
+/* ---- GALERIE ---- */
+.galerie-screen { width: 100%; background: #080806; }
+.galerie-header { padding: 28px 20px 20px; text-align: center; }
+.galerie-eyebrow { font-size: 7px; letter-spacing: 3px; color: #555; text-transform: uppercase; margin-bottom: 4px; }
+.galerie-title { font-family: 'Great Vibes', cursive; font-size: 32px; color: #f5f3ee; }
+.gal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; padding: 0 20px 20px; }
+.gal-item { background: #111; overflow: hidden; }
+.gal-item:first-child { grid-column: span 2; aspect-ratio: 2/1; }
+.gal-item { aspect-ratio: 1/1.2; }
+.gal-item img { width: 100%; height: 100%; object-fit: cover; filter: invert(1) brightness(0.8); display: block; }
+
+/* ---- LIVRE D'OR ---- */
+.livredor-screen { width: 100%; padding: 28px 20px; background: #0f0f0d; }
+.livredor-header { text-align: center; margin-bottom: 24px; }
+.msg-card { background: #161614; padding: 16px; margin-bottom: 2px; position: relative; }
+.msg-card::before { content: '"'; position: absolute; top: 6px; left: 12px; font-family: 'Playfair Display', serif; font-size: 28px; color: #333; line-height: 1; }
+.msg-text { font-size: 11px; color: #888; line-height: 1.6; font-style: italic; padding-top: 8px; }
+.msg-author { font-size: 8px; letter-spacing: 2px; color: #555; text-transform: uppercase; margin-top: 8px; }
+
+/* Layout général */
+.preview-layout {
+  display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; align-items: flex-start;
+}
+.preview-col { display: flex; flex-direction: column; gap: 24px; }
+.preview-title { font-family: 'Playfair Display', serif; font-size: 11px; letter-spacing: 2px; color: #555; text-transform: uppercase; margin-bottom: 8px; text-align: center; }
+
+.ornament-s { display: flex; align-items: center; gap: 8px; margin: 8px auto; width: 120px; }
+.orn-line-s { flex: 1; height: 1px; background: linear-gradient(to right, transparent, #2a2a2a, transparent); }
+.orn-dia-s { width: 4px; height: 4px; background: #444; transform: rotate(45deg); flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<h2>Aperçu complet — Urlice & José</h2>
+<p class="subtitle">Site mobile-first noir & blanc · 8 sections · Nuit de Luxe. Validez pour qu'on code la version complète.</p>
+
+<div class="preview-layout">
+
+  <!-- COL 1: HERO + COUNTDOWN -->
+  <div class="preview-col">
+    <div>
+      <div class="preview-title">① Hero — Stroke Draw</div>
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="hero-screen">
+          <div class="hero-particles"></div>
+          <div class="hero-illus">
+            <img src="../../../../img blanc noire/2.jpg" alt="">
+          </div>
+          <div class="hero-text">
+            <div class="hero-eyebrow-s">Vous êtes invités au mariage de</div>
+            <div class="hero-name-big">Urlice<span class="hero-amp">&amp;</span>José</div>
+            <div class="hero-date-s">19 · Décembre · 2026 · Godomey</div>
+          </div>
+          <div class="hero-scroll-s">
+            <span>Découvrir</span>
+            <div class="scroll-line-s"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="preview-title">③ Compte à rebours live</div>
+      <div class="phone-frame">
+        <div class="countdown-screen">
+          <div class="cd-label">Plus que</div>
+          <div class="cd-row">
+            <div class="cd-unit"><div class="cd-num" id="d">34</div><div class="cd-lbl">Jours</div></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-unit"><div class="cd-num" id="h">08</div><div class="cd-lbl">Heures</div></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-unit"><div class="cd-num" id="m">22</div><div class="cd-lbl">Min</div></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-unit"><div class="cd-num" id="s">47</div><div class="cd-lbl">Sec</div></div>
+          </div>
+          <div class="cd-title">avant le grand jour</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COL 2: PROGRAMME + RSVP -->
+  <div class="preview-col">
+    <div>
+      <div class="preview-title">④ Programme</div>
+      <div class="phone-frame">
+        <div class="prog-screen">
+          <div class="prog-header">
+            <div class="prog-eyebrow">Le 19 Décembre 2026</div>
+            <div class="prog-title">Programme</div>
+            <div class="ornament-s"><div class="orn-line-s"></div><div class="orn-dia-s"></div><div class="orn-line-s"></div></div>
+          </div>
+          <div class="prog-line-wrap">
+            <div class="prog-vline"></div>
+            <div class="prog-item"><div class="prog-dot"></div><div class="prog-time">09h00</div><div><div class="prog-name">Accueil des invités</div><div class="prog-desc">Rafraîchissements de bienvenue</div></div></div>
+            <div class="prog-item"><div class="prog-dot"></div><div class="prog-time">10h00</div><div><div class="prog-name">Cérémonie</div><div class="prog-desc">L'union d'Urlice & José</div></div></div>
+            <div class="prog-item"><div class="prog-dot"></div><div class="prog-time">12h30</div><div><div class="prog-name">Séance photos</div><div class="prog-desc">Avec les mariés et proches</div></div></div>
+            <div class="prog-item"><div class="prog-dot"></div><div class="prog-time">14h00</div><div><div class="prog-name">Réception & Déjeuner</div><div class="prog-desc">Repas festif et chaleureux</div></div></div>
+            <div class="prog-item"><div class="prog-dot"></div><div class="prog-time">20h00</div><div><div class="prog-name">Soirée & Danse</div><div class="prog-desc">Jusqu'au bout de la nuit</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="preview-title">⑥ RSVP</div>
+      <div class="phone-frame">
+        <div class="rsvp-screen">
+          <div class="rsvp-header">
+            <div class="rsvp-eyebrow">Confirmez votre présence</div>
+            <div class="rsvp-title">RSVP</div>
+            <div class="ornament-s" style="margin:8px auto"><div class="orn-line-s"></div><div class="orn-dia-s"></div><div class="orn-line-s"></div></div>
+          </div>
+          <div class="form-group-s"><label class="form-label-s">Votre nom complet</label><input class="form-input-s" placeholder="Famille Amoussou…"></div>
+          <div class="form-group-s">
+            <label class="form-label-s">Serez-vous présent(e) ?</label>
+            <div class="attend-row">
+              <button class="attend-btn active">Avec joie ✓</button>
+              <button class="attend-btn">Dans le cœur ✗</button>
+            </div>
+          </div>
+          <div class="form-group-s"><label class="form-label-s">Nombre de personnes</label><input class="form-input-s" placeholder="2 personnes"></div>
+          <button class="submit-btn">Confirmer ma présence</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COL 3: GALERIE + LIVRE D'OR -->
+  <div class="preview-col">
+    <div>
+      <div class="preview-title">⑤ Galerie illustrations</div>
+      <div class="phone-frame">
+        <div class="galerie-screen">
+          <div class="galerie-header">
+            <div class="galerie-eyebrow">Portraits</div>
+            <div class="galerie-title">Les Mariés</div>
+            <div class="ornament-s" style="margin:8px auto"><div class="orn-line-s"></div><div class="orn-dia-s"></div><div class="orn-line-s"></div></div>
+          </div>
+          <div class="gal-grid">
+            <div class="gal-item"><img src="../../../../img blanc noire/1.jpg" alt=""></div>
+            <div class="gal-item"><img src="../../../../img blanc noire/5.jpg" alt=""></div>
+            <div class="gal-item"><img src="../../../../img blanc noire/6.jpg" alt=""></div>
+            <div class="gal-item"><img src="../../../../img blanc noire/3.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="preview-title">⑧ Livre d'or</div>
+      <div class="phone-frame">
+        <div class="livredor-screen">
+          <div class="livredor-header">
+            <div class="prog-eyebrow">Vos mots pour eux</div>
+            <div class="prog-title">Livre d'or</div>
+            <div class="ornament-s" style="margin:8px auto"><div class="orn-line-s"></div><div class="orn-dia-s"></div><div class="orn-line-s"></div></div>
+          </div>
+          <div class="form-group-s"><label class="form-label-s">Votre prénom</label><input class="form-input-s" placeholder="Marie…"></div>
+          <div class="form-group-s"><label class="form-label-s">Votre message</label><input class="form-input-s" placeholder="Vos vœux les plus sincères…"></div>
+          <button class="submit-btn">Laisser mon message</button>
+          <div style="margin-top: 20px;">
+            <div class="msg-card"><div class="msg-text">Que votre amour soit aussi fort que votre joie en ce jour. Toutes mes félicitations !</div><div class="msg-author">— Famille Amoussou</div></div>
+            <div class="msg-card"><div class="msg-text">Urlice et José, vous méritez tout le bonheur du monde.</div><div class="msg-author">— Tantine Céline</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="text-align:center; margin-top: 40px; padding: 24px; border: 1px solid #222; border-radius: 8px; max-width: 500px; margin-left:auto; margin-right:auto;">
+  <div style="font-family: 'Playfair Display', serif; font-size: 16px; color: #f5f3ee; margin-bottom: 8px;">Ce design vous convient ?</div>
+  <p style="font-size: 12px; color: #666; margin-bottom: 20px;">Répondez <strong style="color:#f5f3ee">"oui c'est parti"</strong> pour que je code la version complète, ou dites-moi ce que vous souhaitez ajuster.</p>
+  <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; font-size:10px; letter-spacing:2px; color:#555; text-transform:uppercase;">
+    <span>✦ Fond noir</span>
+    <span>✦ Illustrations inversées</span>
+    <span>✦ Script + Majuscules</span>
+    <span>✦ Particules flottantes</span>
+    <span>✦ Stroke Draw reveal</span>
+    <span>✦ 8 sections</span>
+    <span>✦ Countdown live</span>
+    <span>✦ RSVP + Livre d'or</span>
+  </div>
+</div>
+
+<script>
+function updateCountdown() {
+  const target = new Date('2026-12-19T10:00:00');
+  const now = new Date();
+  const diff = Math.max(0, target - now);
+  const days = Math.floor(diff / (1000*60*60*24));
+  const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+  const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+  const secs = Math.floor((diff % (1000*60)) / 1000);
+  document.getElementById('d').textContent = String(days).padStart(2,'0');
+  document.getElementById('h').textContent = String(hours).padStart(2,'0');
+  document.getElementById('m').textContent = String(mins).padStart(2,'0');
+  document.getElementById('s').textContent = String(secs).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
