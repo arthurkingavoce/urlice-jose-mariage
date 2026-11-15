@@ -88,13 +88,13 @@ export function Hero() {
           transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
         >
           <Image
-            src="/images/2.jpg"
+            src="/images/2.png"
             alt="Urlice & José"
             width={320}
             height={600}
             priority
             className="h-full w-auto object-contain"
-            style={{ filter: "grayscale(1) contrast(1.1)", mixBlendMode: "multiply" }}
+            style={{ filter: "grayscale(1) contrast(1.1)" }}
           />
           {/* Fade bottom */}
           <div
