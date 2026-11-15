@@ -41,7 +41,7 @@ export function Galerie() {
         </div>
       </motion.div>
 
-      <div className="grid grid-cols-2 gap-0.5 max-w-sm mx-auto px-6">
+      <div className="grid grid-cols-2 gap-1 max-w-xl mx-auto px-3">
         {images.map((img, i) => {
           const revealed = tapped === i;
           return (
@@ -53,7 +53,7 @@ export function Galerie() {
               transition={{ delay: i * 0.08 }}
               onClick={() => setTapped(revealed ? null : i)}
               className={`group relative overflow-hidden cursor-zoom-in ${
-                img.span === 2 ? "col-span-2 aspect-[2/1]" : "aspect-[3/4]"
+                img.span === 2 ? "col-span-2 aspect-[3/2]" : "aspect-[3/4]"
               }`}
             >
               {/* Photo couleur — hover desktop ou tap mobile */}
@@ -72,10 +72,10 @@ export function Galerie() {
                 alt={img.alt}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className={`object-contain absolute inset-0 transition-opacity duration-500 ${
+                className={`object-cover absolute inset-0 transition-opacity duration-500 ${
                   revealed ? "opacity-0" : "opacity-100 group-hover:opacity-0"
                 }`}
-                style={{ filter: "grayscale(0.2)" }}
+                style={{ filter: "grayscale(0.15)" }}
               />
               {/* Hint */}
               <div
