@@ -110,7 +110,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 0.8 }}
-          className="text-[10px] tracking-[5px] uppercase mb-1"
+          className="text-[12px] tracking-[4px] uppercase mb-1"
           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Vous êtes invités au mariage de
@@ -136,7 +136,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.5, duration: 0.8 }}
-          className="text-[11px] tracking-[4px] uppercase mt-4"
+          className="text-[12px] tracking-[3px] uppercase mt-4"
           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           19 · Décembre · 2026 · Godomey, Bénin
@@ -151,7 +151,7 @@ export function Hero() {
         className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
         <span
-          className="text-[9px] tracking-[3px] uppercase"
+          className="text-[11px] tracking-[3px] uppercase"
           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Découvrir

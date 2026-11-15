@@ -21,7 +21,7 @@ export function Programme() {
         className="text-center mb-16 px-6"
       >
         <p
-          className="text-[10px] tracking-[4px] uppercase mb-2"
+          className="text-[12px] tracking-[3px] uppercase mb-2"
           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Le 19 Décembre 2026
@@ -57,20 +57,20 @@ export function Programme() {
               style={{ borderColor: "rgb(110 108 102)" }}
             />
             <span
-              className="text-[11px] tracking-[1px] whitespace-nowrap pt-0.5 min-w-[42px]"
+              className="text-[13px] tracking-[1px] whitespace-nowrap pt-0.5 min-w-[46px]"
               style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
             >
               {item.time}
             </span>
             <div>
               <h3
-                className="text-base italic"
+                className="text-lg italic"
                 style={{ color: "rgb(12 11 9)", fontFamily: "var(--font-serif)" }}
               >
                 {item.title}
               </h3>
               <p
-                className="text-xs leading-relaxed mt-0.5"
+                className="text-sm leading-relaxed mt-0.5"
                 style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
               >
                 {item.desc}

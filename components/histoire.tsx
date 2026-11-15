@@ -42,19 +42,19 @@ function TimelineItem({ event, index }: { event: (typeof events)[0]; index: numb
     >
       <div className={`flex-1 ${isLeft ? "text-right" : "text-left"}`}>
         <p
-          className="text-[10px] tracking-[3px] uppercase mb-1"
+          className="text-[12px] tracking-[2px] uppercase mb-1"
           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           {event.label}
         </p>
         <h3
-          className="text-lg italic mb-2"
+          className="text-xl italic mb-2"
           style={{ color: "rgb(12 11 9)", fontFamily: "var(--font-serif)" }}
         >
           {event.title}
         </h3>
         <p
-          className="text-sm leading-relaxed"
+          className="text-[15px] leading-relaxed"
           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           {event.desc}
@@ -84,7 +84,7 @@ export function Histoire() {
         className="text-center mb-16 px-6"
       >
         <p
-          className="text-[10px] tracking-[4px] uppercase mb-2"
+          className="text-[12px] tracking-[3px] uppercase mb-2"
           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Depuis le début

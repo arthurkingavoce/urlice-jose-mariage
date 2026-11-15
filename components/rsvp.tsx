@@ -48,7 +48,7 @@ export function Rsvp() {
         className="text-center mb-14 px-6"
       >
         <p
-          className="text-[10px] tracking-[4px] uppercase mb-2"
+          className="text-[12px] tracking-[3px] uppercase mb-2"
           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Confirmez votre présence
@@ -83,7 +83,7 @@ export function Rsvp() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel
-                          className="text-[10px] tracking-[3px] uppercase"
+                          className="text-[12px] tracking-[2px] uppercase"
                           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
                         >
                           Votre nom complet
@@ -113,7 +113,7 @@ export function Rsvp() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel
-                          className="text-[10px] tracking-[3px] uppercase"
+                          className="text-[12px] tracking-[2px] uppercase"
                           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
                         >
                           Serez-vous présent(e) ?
@@ -127,7 +127,7 @@ export function Rsvp() {
                                 setAttendance(val);
                                 field.onChange(val);
                               }}
-                              className="flex-1 py-2.5 border text-[10px] tracking-[3px] uppercase transition-all duration-200"
+                              className="flex-1 py-2.5 border text-[12px] tracking-[2px] uppercase transition-all duration-200"
                               style={{
                                 fontFamily: "var(--font-body)",
                                 borderColor: attendance === val ? "rgb(12 11 9)" : "rgb(210 207 200)",
@@ -193,7 +193,7 @@ export function Rsvp() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel
-                          className="text-[10px] tracking-[3px] uppercase"
+                          className="text-[12px] tracking-[2px] uppercase"
                           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
                         >
                           Un message (optionnel)
@@ -217,7 +217,7 @@ export function Rsvp() {
 
                   <Button
                     type="submit"
-                    className="w-full text-[10px] tracking-[4px] uppercase py-5 rounded-none mt-2"
+                    className="w-full text-[12px] tracking-[3px] uppercase py-5 rounded-none mt-2"
                     style={{
                       fontFamily: "var(--font-body)",
                       backgroundColor: "rgb(12 11 9)",

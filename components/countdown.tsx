@@ -18,7 +18,7 @@ function Unit({ value, label }: { value: number; label: string }) {
         {String(value).padStart(2, "0")}
       </motion.span>
       <span
-        className="text-[8px] tracking-[3px] uppercase"
+        className="text-[11px] tracking-[2px] uppercase"
         style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
       >
         {label}
@@ -40,7 +40,7 @@ export function Countdown() {
         className="max-w-sm mx-auto px-6"
       >
         <p
-          className="text-[10px] tracking-[4px] uppercase mb-10"
+          className="text-[12px] tracking-[3px] uppercase mb-10"
           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Plus que

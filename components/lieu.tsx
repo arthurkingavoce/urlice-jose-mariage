@@ -13,7 +13,7 @@ export function Lieu() {
         className="text-center mb-14 px-6"
       >
         <p
-          className="text-[10px] tracking-[4px] uppercase mb-2"
+          className="text-[12px] tracking-[3px] uppercase mb-2"
           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Où nous retrouver
@@ -57,7 +57,7 @@ export function Lieu() {
           ].map((row, i) => (
             <div
               key={i}
-              className="flex items-center gap-3 py-3 text-sm"
+              className="flex items-center gap-3 py-3 text-[15px]"
               style={{
                 borderBottom: "1px solid rgb(210 207 200)",
                 color: "rgb(110 108 102)",

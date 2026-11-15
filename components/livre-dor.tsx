@@ -78,7 +78,7 @@ export function LivreDor() {
         className="text-center mb-14 px-6"
       >
         <p
-          className="text-[10px] tracking-[4px] uppercase mb-2"
+          className="text-[12px] tracking-[3px] uppercase mb-2"
           style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
         >
           Vos mots pour eux
@@ -97,7 +97,7 @@ export function LivreDor() {
       <form onSubmit={handleSubmit} className="max-w-sm mx-auto px-6 mb-12 space-y-5">
         <div>
           <label
-            className="text-[10px] tracking-[3px] uppercase block mb-1"
+            className="text-[12px] tracking-[2px] uppercase block mb-1"
             style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
           >
             Votre prénom
@@ -117,7 +117,7 @@ export function LivreDor() {
         </div>
         <div>
           <label
-            className="text-[10px] tracking-[3px] uppercase block mb-1"
+            className="text-[12px] tracking-[2px] uppercase block mb-1"
             style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
           >
             Votre message
@@ -138,7 +138,7 @@ export function LivreDor() {
         </div>
         <Button
           type="submit"
-          className="w-full text-[10px] tracking-[4px] uppercase py-5 rounded-none"
+          className="w-full text-[12px] tracking-[3px] uppercase py-5 rounded-none"
           style={{
             fontFamily: "var(--font-body)",
             backgroundColor: "rgb(12 11 9)",
@@ -169,13 +169,13 @@ export function LivreDor() {
                 &ldquo;
               </span>
               <p
-                className="text-sm italic leading-relaxed pt-2"
+                className="text-[15px] italic leading-relaxed pt-2"
                 style={{ color: "rgb(110 108 102)", fontFamily: "var(--font-body)" }}
               >
                 {msg.text}
               </p>
               <p
-                className="text-[9px] tracking-[2px] uppercase mt-3"
+                className="text-[12px] tracking-[1px] uppercase mt-3"
                 style={{ color: "rgba(110,108,102,0.6)", fontFamily: "var(--font-body)" }}
               >
                 — {msg.name}

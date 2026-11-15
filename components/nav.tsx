@@ -45,7 +45,7 @@ export function Nav() {
           <li key={l.href}>
             <a
               href={l.href}
-              className="text-[11px] tracking-[2.5px] uppercase text-muted-foreground hover:text-foreground transition-colors"
+              className="text-[12px] tracking-[2px] uppercase text-muted-foreground hover:text-foreground transition-colors"
               style={{ fontFamily: "var(--font-body)" }}
             >
               {l.label}
